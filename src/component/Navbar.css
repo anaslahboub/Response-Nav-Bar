@@ -1,0 +1,106 @@
+nav {
+    display: flex;
+    background-color: #062849; /* Darker, modern background color */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 30px; /* Adjusted padding for better spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+.nav-link li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ecf0f1; /* Light text color */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-link li a:hover {
+    color: #3498db; /* Professional blue hover color */
+    border-bottom: solid 2px #3498db;
+}
+
+.mobile {
+    color: #ecf0f1; /* Matching color for the mobile icon */
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-link li {
+        padding: 0 10px;
+    }
+    .nav-link li a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-link li {
+        padding: 0 8px;
+    }
+    .nav-link li a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mobile {
+        display: block;
+    }
+    .mobile i {
+        font-size: 28px;
+        cursor: pointer;
+    }
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        background-color: #062849; 
+        right: -300px;
+        padding: 20px;
+        top: 60px;
+        margin: 0;
+        height: calc(100% - 60px);
+        transition: right 0.3s ease;
+    }
+    .nav-link.active {
+        right: 0;
+    }
+    .nav-link li {
+        margin-top: 30px;
+        cursor: pointer;
+    }
+    .nav-link li a {
+        font-size: 20px;
+    }
+}
+.description {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #34495e; 
+    color: #ecf0f1; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.description p {
+    margin: 0;
+}
