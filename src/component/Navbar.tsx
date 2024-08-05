@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import "./Navbar.css";
 
 class Navbar extends Component {
@@ -25,19 +26,17 @@ class Navbar extends Component {
                     </a>
                     <div>
                         <ul className={this.state.clicked ? 'nav-link active' : 'nav-link'}>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">About</a></li>
+                            <li><NavLink to="/home">Home</NavLink></li>
+                            <li><NavLink to="/blog">Blog</NavLink></li>
+                            <li><NavLink to="/contact">Contact</NavLink></li>
+                            <li><NavLink to="/about">About</NavLink></li>
                         </ul>
                     </div>
                     <div className='mobile' onClick={this.handleClick}>
                         <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i>
                     </div>
                 </nav>
-                <div className="description">
-                    <p>This navigation bar is fully responsive, adapting to both desktop and mobile screens. It includes a toggle menu for mobile devices and stylish hover effects for navigation links, providing a modern and user-friendly interface.</p>
-                </div>
+               
             </>
         );
     }

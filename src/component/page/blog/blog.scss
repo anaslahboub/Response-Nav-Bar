@@ -1,0 +1,113 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@font-face {
+    font-family: 'Campton';
+    src: url('/src/assets/fonts/CamptonLight.otf') format('truetype'),
+         url('/src/assets/fonts/CamptonLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dropdown {
+  background: #E3F2FD;
+  width: 300px;
+  margin: 140px auto;
+  font-family: Campton;
+  font-size: 18.63px;
+  font-weight: 400;
+  line-height: 27.95px;
+  text-align: left;
+
+
+  .dropdown-toggle {
+    display: flex;
+    height: 55px;
+    background: #fff;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 20px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+
+    i {
+      font-size: 25px;
+      transition: 0.3s;
+      -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
+    }
+  }
+
+  &.show {
+    .dropdown-toggle i {
+      transform: rotate(-180deg);
+    }
+
+    .dropdown-toggle{
+        border-radius:  20px 20px 0 0;
+        -webkit-border-radius:  20px 20px 0 0;
+        -moz-border-radius:  20px 20px 0 0;
+        -ms-border-radius:  20px 20px 0 0;
+        -o-border-radius:  20px 20px 0 0;  
+    }
+
+  }
+
+  .dropdown-menu {
+    display: none;
+    li{
+      margin: 0 auto;
+      padding: 10px;
+
+      &:hover{
+        cursor: pointer;
+        background-color:  #D9D9D9;
+        
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        width: 250px;
+        text-align: center;
+        
+}
+    }
+  }
+
+  &.show{
+    .dropdown-menu{
+        position: relative;
+        padding: 0 20px;
+        background-color: #fff;
+        list-style: none;
+        border-radius: 0 0 30px 30px ;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        -webkit-border-radius: 0 0 30px 30px ;
+        -moz-border-radius: 0 0 30px 30px ;
+        -ms-border-radius: 0 0 30px 30px ;
+        -o-border-radius: 0 0 30px 30px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+  }
+}
